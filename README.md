@@ -13,7 +13,7 @@ write little program, which been counting incoming and outcoming people.
    #python PeopleCounterMain.py
    
    If you want chenge video or set stream from rtsp camera change line
-   camera = cv2.VideoCapture("test2.mp4") # set here your video
+   camera = cv2.VideoCapture(0) # set here your video
    
    This example use mechanism computer the absolute difference between the current frame and
    first frame, so I compare two frame and if chenges exist i find where. If area bigest more than 
