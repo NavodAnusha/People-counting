@@ -2,7 +2,7 @@
 This program count incoming and outcoming people, who crooss by hall. 
   I find many examples in video, how count people who crossing hall or doors, but didn`t find examples code. I decided
 write little program, which been counting incoming and outcoming people.
-  I use OpenCV and Python 2.7
+  I use OpenCV and Python 3.8
   So, begining you need install all dependensies:
   
    pip install --trusted-host pypi.python.org -r requirements.txt
