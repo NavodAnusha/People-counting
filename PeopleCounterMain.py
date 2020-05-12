@@ -1,10 +1,9 @@
-import argparse
+import cv2
 import datetime
 import imutils
-import math
-import cv2
-import numpy as np
+from Naked.toolshed import system
 
+import dbconnection
 
 width = 800
 
@@ -82,9 +81,20 @@ if __name__ == "__main__":
 
             if (testIntersectionIn((x + x + w) // 2, (y + y + h) // 2)):
                 textIn += 1
+                dbconnection.databaseConnection((x, y))
+                
+
+
 
             if (testIntersectionOut((x + x + w) // 2, (y + y + h) // 2)):
                 textOut += 1
+                dbconnection.databaseConnection((x, y))
+
+
+
+
+
+
 
             # draw the text and timestamp on the frame
 
