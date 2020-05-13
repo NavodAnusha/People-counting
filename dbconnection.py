@@ -25,4 +25,3 @@ def databaseConnection():
         'countin': "Test1",
         'countout': "Test2"
 })
-
