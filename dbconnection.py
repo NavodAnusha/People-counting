@@ -21,9 +21,9 @@ def databaseConnection():
     doc_ref = db.collection('PeopleCounting').document('live')
 
     doc_ref.set({
-        'countdate': date,
-        'countin': PeopleCounterMain.testIntersectionIn(),
-        'countout': PeopleCounterMain.testIntersectionOut()
+        # 'countdate': date,
+        # 'countin': PeopleCounterMain.testIntersectionIn(),
+        # 'countout': PeopleCounterMain.testIntersectionOut()
 
     })
 

@@ -81,14 +81,14 @@ if __name__ == "__main__":
 
             if (testIntersectionIn((x + x + w) // 2, (y + y + h) // 2)):
                 textIn += 1
-                dbconnection.databaseConnection((x, y))
-                
+                dbconnection.databaseConnection()
+
 
 
 
             if (testIntersectionOut((x + x + w) // 2, (y + y + h) // 2)):
                 textOut += 1
-                dbconnection.databaseConnection((x, y))
+                # dbconnection.databaseConnection()
 
 
 
