@@ -14,7 +14,7 @@ def testIntersectionIn(x, y):
     res = -450 * x + 400 * y + 157500
     if ((res >= -550) and (res < 550)):
         print(str(res))
-        return True
+        return True.databaseConnection(testIntersectionIn(x, y))
     return False
 
 
@@ -23,6 +23,7 @@ def testIntersectionOut(x, y):
     if ((res >= -550) and (res <= 550)):
         print(str(res))
         return True
+
 
     return False
 
@@ -81,7 +82,7 @@ if __name__ == "__main__":
 
             if (testIntersectionIn((x + x + w) // 2, (y + y + h) // 2)):
                 textIn += 1
-                dbconnection.databaseConnection()
+                dbconnection.databaseConnection(testIntersectionIn())
 
 
 
