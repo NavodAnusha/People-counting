@@ -14,7 +14,7 @@ def testIntersectionIn(x, y):
     res = -450 * x + 400 * y + 157500
     if ((res >= -550) and (res < 550)):
         print(str(res))
-        return True.databaseConnection(testIntersectionIn(x, y))
+        return True
     return False
 
 
