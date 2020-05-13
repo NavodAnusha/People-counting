@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
             if (testIntersectionIn((x + x + w) // 2, (y + y + h) // 2)):
                 textIn += 1
-                dbconnection.databaseConnection(testIntersectionIn(textIn))
+                dbconnection.databaseConnection(textIn)
 
 
 

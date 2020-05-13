@@ -14,7 +14,7 @@ date = datetime.now()
 # adding first data
 
 
-def databaseConnection():
+def databaseConnection(textIn):
     cred = credentials.Certificate('firebase-sdk.json')
     firebase_admin.initialize_app(cred)
     db = firestore.client()
@@ -22,6 +22,6 @@ def databaseConnection():
 
     doc_ref.set({
         'countdate': date,
-        'countin': "Test1",
+        'countin': textIn,
         'countout': "Test2"
 })
