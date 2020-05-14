@@ -12,16 +12,26 @@ date = datetime.now()
 
 
 # adding first data
+cred = credentials.Certificate('firebase-sdk.json')
+firebase_admin.initialize_app(cred)
 
 
-def databaseConnection(textIn):
-    cred = credentials.Certificate('firebase-sdk.json')
-    firebase_admin.initialize_app(cred)
+def databaseConnection(textIn, textOut):
     db = firestore.client()
     doc_ref = db.collection('PeopleCounting').document('live')
 
     doc_ref.set({
-        'countdate': date,
-        'countin': textIn,
-        'countout': "Test2"
-})
+
+            'countOut': textOut,
+            'countIn': textIn
+        })
+
+
+# def databaseConnection1(textIn):
+#
+#     db = firestore.client()
+#     doc_ref = db.collection('PeopleCounting').document('live')
+#
+#     doc_ref.set({
+#         'countOut': textIn
+#     })

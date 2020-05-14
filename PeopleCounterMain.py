@@ -10,6 +10,7 @@ width = 800
 textIn = 0
 textOut = 0
 
+
 def testIntersectionIn(x, y):
     res = -450 * x + 400 * y + 157500
     if ((res >= -550) and (res < 550)):
@@ -23,13 +24,11 @@ def testIntersectionOut(x, y):
     if ((res >= -550) and (res <= 550)):
         print(str(res))
         return True
-
-
     return False
 
 
 if __name__ == "__main__":
-    camera = cv2.VideoCapture("test2.mp4")
+    camera = cv2.VideoCapture("test3.mp4")
 
     firstFrame = None
 
@@ -82,20 +81,12 @@ if __name__ == "__main__":
 
             if (testIntersectionIn((x + x + w) // 2, (y + y + h) // 2)):
                 textIn += 1
-                dbconnection.databaseConnection(textIn)
-
-
+                dbconnection.databaseConnection(textIn, textOut)
 
 
             if (testIntersectionOut((x + x + w) // 2, (y + y + h) // 2)):
                 textOut += 1
-                # dbconnection.databaseConnection()
-
-
-
-
-
-
+                # dbconnection.databaseConnection(textOut)
 
             # draw the text and timestamp on the frame
 
